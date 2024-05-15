@@ -14,27 +14,19 @@ public class Deck {
 	setCards(new ArrayList<Cards>());
 	}
 	
-	public void initDeck(){
-		// 52 Cards in a Deck
-		String[] deck = new String[52];
-		// 4 Suits to a Deck of Cards
-		String[] suit = {"Spades","Hearts","Diamonds","Clubs"};
-		// Rank from Lowest to Highest
-		String[] rank = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
-		
-		Integer[] value = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
-		
-		  for (String s : suit) {
-			  for (Integer v : value) {
-	            for (String r : rank) {
-	                Cards card = new Cards(r, s, v);
+	  
+	 public void initDeck() {
+	        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
+	        String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+
+	        for (String suit : suits) {
+	            for (String rank : ranks) {
+	                Cards card = new Cards(rank, suit);
 	                cards.add(card);
-	                System.out.println(card.Name());
+	                System.out.println(card.Name()); // Print the name of each card in the shuffled deck
 	            }
 	        }
-	}
-	}
-	
+	 }
 	
 	public ArrayList<Cards> getCards() {
 		return cards;
