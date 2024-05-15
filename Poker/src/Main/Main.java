@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import DeckofCards.Cards;
 import DeckofCards.Deck;
 import People.Player;
-
+// help.exe
 public class Main {
 	
 	
@@ -37,6 +37,7 @@ public class Main {
         //Building beck method
         System.out.println("Initial deck:");
         deck.initDeck();
+        System.out.println("Cards Remainig Cards: " + deck.size());
         System.out.println("\n-------------------------------------\n");
         // Shuffling the deck
         System.out.println("\nShuffling deck...");
@@ -53,6 +54,7 @@ public class Main {
                 Cards card = deck.dealCard();
                 if (card != null) {
                     player.addCard(card);
+                  
 
                 } else {
                     System.out.println("No cards left in the deck.");
@@ -73,8 +75,12 @@ public class Main {
             }
             player.showHand();
             player.evaluateHand(player.getHand());
+            System.out.println("\n\n");
             dealer.showHand();
-            dealer.evaluateHand(player.getHand());
+            dealer.evaluateHand(dealer.getHand());
+            System.out.println("\n");
+            System.out.println("Cards Remainig Cards: " + deck.size());
+
 
         }
  
