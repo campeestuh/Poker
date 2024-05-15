@@ -7,12 +7,14 @@ public class Cards {
 	public String rank;
 	public Integer value;
 
-	public Cards(String rank, String suit, Integer value) {
-		this.setRank(rank);
-        this.setSuit(suit);	
-        this.setValue(value);
+	public Cards(String rank, String suit) {
+	       this.rank = rank;
+	        this.suit = suit;
+ 
 	}
 	
+	
+
 	public String Name() {
 		return rank + " of " + suit;
 	}
