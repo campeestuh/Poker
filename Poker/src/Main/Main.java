@@ -5,7 +5,7 @@ import DeckofCards.Cards;
 import DeckofCards.Deck;
 import People.Player;
 // help.exe
-public class Deck_Driver {
+public class Main {
 	
 	
     public static void main(String[] args) {
@@ -30,9 +30,8 @@ public class Deck_Driver {
         }
         
         
-        player.Buyin(0);
-        
-        player.Buyin(25);
+        player.buyIn(0);
+        player.buyIn(25);
 		////////////////////////////////////////////////////////////
 		// Deck Functionality
         //Building beck method
@@ -51,7 +50,6 @@ public class Deck_Driver {
         ////////////////////////////////////////////////////////////
         // Creatig hands to dealer 
         // Giving 5 cards to player
-        System.out.println("Cards Remainig Cards: " + deck.size());
             for (int i = 0; i < 5; i++) {
                 Cards card = deck.dealCard();
                 if (card != null) {
@@ -75,7 +73,6 @@ public class Deck_Driver {
                     break;
                 }
             }
-            // Displays Players and Dealers hand and gets evaluated
             player.showHand();
             player.evaluateHand(player.getHand());
             System.out.println("\n\n");
@@ -83,22 +80,11 @@ public class Deck_Driver {
             dealer.evaluateHand(dealer.getHand());
             System.out.println("\n");
             System.out.println("Cards Remainig Cards: " + deck.size());
-            System.out.println("\n");
-            if (player.evaluateHand(player.getHand()) == dealer.evaluateHand(dealer.getHand())) {
-            	System.out.println("FIX ME");
-            }
-            else if (player.evaluateHand(player.getHand()) > dealer.evaluateHand(dealer.getHand())) {
-            	System.out.println(player.getName() + " Wins!");
-            }
-            else {
-            	System.out.println(dealer.getName() + " Wins!");
 
-            }
+
         }
  
     	////////////////////////////////////////////////////////////
-    	// Determine Winner
-    
-    
+
     
     }
