@@ -1,7 +1,6 @@
 package People;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,7 +40,7 @@ public class Player {
 //	        Value.put("Ace", 14);
 //	    }
 //	    
-	public void Buyin(int amount) {
+	public void buyIn(int amount) {
 		if (amount >= 25) {
 			amount = amount - 25;
 			System.out.println("Ante Placed. $" + amount + " Remaining");
@@ -349,8 +348,5 @@ public class Player {
 	public void clearHand() {
         Hand.clear();
     }
-
-
-	
 	
 }
