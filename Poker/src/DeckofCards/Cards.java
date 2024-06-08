@@ -1,5 +1,5 @@
 package DeckofCards;
-// import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Cards {
 	
@@ -12,6 +12,8 @@ public class Cards {
 	        this.suit = suit;
  
 	}
+	
+	
 
 	public String Name() {
 		return rank + " of " + suit;
