@@ -16,22 +16,16 @@ private Integer Buyin;
 	// Straight Flush (Have 5 cards in sequential order of the same suit)
 	// Royal Flush (Hand contains: 10, Jack , Queen, King, Ace)
 	
-	
 	public game() {
-		setBuyin(25);
-}
-
-
-	  
+		setBuyIn(25);
+	} 
 	
-	public Integer getBuyin() {
+	public Integer getBuyIn() {
 		return Buyin;
 	}
 
-
-	public void setBuyin(Integer buyin) {
+	public void setBuyIn(Integer buyin) {
 		Buyin = buyin;
 	}
-	
 	
 }
